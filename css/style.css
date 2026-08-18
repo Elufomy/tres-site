@@ -1,0 +1,14 @@
+/* ════════════════════════════════════════════════
+   STYLE.CSS — входная точка стилей.
+   reviews.css удалён, вместо него — faq.css.
+   ════════════════════════════════════════════════ */
+@import url('base.css');     /* переменные, сброс, утилиты, шум, курсор */
+@import url('header.css');   /* шапка + мобильное меню */
+@import url('hero.css');     /* первый экран */
+@import url('works.css');    /* портфолио */
+@import url('services.css'); /* услуги (аккордеон) */
+@import url('process.css');  /* этапы работы */
+@import url('team.css');     /* команда + полоса цифр */
+@import url('faq.css');      /* честные вопросы */
+@import url('contact.css');  /* контакты + форма */
+@import url('footer.css');   /* подвал + кнопка «наверх» */

@@ -1,0 +1,39 @@
+/* ═══════════ ШАПКА И МОБИЛЬНОЕ МЕНЮ ═══════════ */
+#hd{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--paper);
+  border-bottom:1px solid var(--line);transition:box-shadow .3s}
+#hd.scrolled{box-shadow:0 6px 24px rgba(24,22,17,.08)}
+.hd-in{height:66px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-family:var(--disp);font-weight:800;font-size:20px}
+.logo span{color:var(--acc)}
+.hd-nav{display:flex;gap:28px}
+.hd-nav a{font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.1em;position:relative;padding:4px 0}
+.hd-nav a::after{content:"";position:absolute;left:0;bottom:0;height:1.5px;width:100%;background:var(--acc);
+  transform:scaleX(0);transform-origin:right;transition:transform .35s}
+.hd-nav a:hover::after{transform:scaleX(1);transform-origin:left}
+.hd-right{display:flex;align-items:center;gap:18px}
+.clock{font-size:12px;letter-spacing:.08em;opacity:.75}
+
+/* бургер */
+.burger{display:none;width:40px;height:40px;position:relative;z-index:160}
+.burger span{position:absolute;left:9px;right:9px;height:2px;background:var(--ink);transition:transform .35s,top .35s}
+.burger span:first-child{top:15px}
+.burger span:last-child{top:24px}
+body.menu-open .burger span:first-child{top:19px;transform:rotate(45deg)}
+body.menu-open .burger span:last-child{top:19px;transform:rotate(-45deg)}
+body.menu-open .burger span{background:var(--paper)}
+
+/* полноэкранное меню */
+.mnav{position:fixed;inset:0;z-index:150;background:var(--ink);color:var(--paper);
+  transform:translateY(-102%);transition:transform .55s cubic-bezier(.7,0,.2,1);
+  display:flex;flex-direction:column;justify-content:center;padding:8%}
+.mnav.open{transform:none}
+.mnav a{font-family:var(--disp);font-weight:700;text-transform:uppercase;font-size:clamp(1.8rem,7vw,3rem);
+  padding:14px 0;border-bottom:1px solid rgba(241,237,226,.15);display:flex;justify-content:space-between;align-items:baseline;transition:color .3s}
+.mnav a i{font-style:normal;font-family:var(--mono);font-size:12px;color:var(--acc)}
+.mnav a:hover{color:var(--acc)}
+
+@media(max-width:900px){
+  .hd-nav,.hd-right .btn{display:none}
+  .burger{display:block}
+}
+@media(max-width:520px){.clock{display:none}}

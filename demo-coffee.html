@@ -1,0 +1,206 @@
+<!-- демо: кофейня у моря -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Кофейня у моря — Владивосток</title>
+<link href="https://fonts.googleapis.com/css2?family=Prata&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --foam:#F4F8FA; --mist:#DFEAF0; --sea:#0E3A53; --wave:#33698C;
+  --sky:#BFD8E4; --brass:#B9853C; --ink:#0C2231; --line:rgba(14,58,83,.18)
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:'Golos Text',sans-serif;background:var(--foam);color:var(--ink)}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1100px,92%);margin:auto}
+h1,h2,.logo{font-family:'Prata',serif;font-weight:400}
+.btn{display:inline-block;background:var(--sea);color:var(--foam);padding:14px 26px;border-radius:2px;border:0;
+  font:600 12px 'Golos Text',sans-serif;text-transform:uppercase;letter-spacing:.14em;cursor:pointer;transition:.3s}
+.btn:hover{background:var(--brass)}
+.btn-o{background:transparent;color:var(--sea);border:1px solid var(--sea)}
+.btn-o:hover{background:var(--sea);color:var(--foam)}
+.ph{display:grid;place-items:center;background:repeating-linear-gradient(45deg,rgba(14,58,83,.06) 0 2px,transparent 2px 16px),var(--mist);
+  color:rgba(12,34,49,.6);font:11px 'Golos Text',sans-serif;letter-spacing:.1em;text-transform:uppercase;text-align:center;padding:16px}
+.hero-img .ph{height:430px}
+.about .ph{height:320px;border-radius:16px;border:1px solid var(--sea);outline:1px solid var(--sea);outline-offset:6px}
+header{position:sticky;top:0;background:var(--foam);border-bottom:3px double var(--sea);z-index:10}
+.hd{display:flex;justify-content:space-between;align-items:center;height:68px}
+.logo{font-size:21px}
+.logo b{color:var(--wave)}
+.logo i{font-style:normal;color:var(--brass)}
+nav{display:flex;gap:24px;font-size:12px;text-transform:uppercase;letter-spacing:.12em}
+nav a{opacity:.8}
+nav a:hover{color:var(--wave);opacity:1}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center;padding:76px 0}
+.tag{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--wave)}
+.hero h1{font-size:clamp(2.3rem,5vw,3.9rem);line-height:1.12;margin:16px 0}
+.hero h1 em{font-style:normal;color:var(--wave)}
+.hero p{max-width:44ch;opacity:.85}
+.hero-btns{display:flex;gap:14px;margin-top:28px;flex-wrap:wrap}
+.hero-img{border-radius:230px 230px 10px 10px;overflow:hidden;background:var(--mist);
+  border:1px solid var(--sea);outline:1px solid var(--sea);outline-offset:6px}
+.hero-img img{width:100%;height:430px;object-fit:cover}
+.wave{line-height:0}
+.wave svg{width:100%;height:46px;display:block}
+.tick{background:var(--sea);color:var(--foam);overflow:hidden;white-space:nowrap;padding:13px 0}
+.tick div{display:inline-block;animation:t 26s linear infinite}
+.tick em{font-style:normal;color:var(--brass);padding:0 14px}
+@keyframes t{to{transform:translateX(-50%)}}
+.sec{padding:84px 0}
+.sec h2{font-size:clamp(1.7rem,3.4vw,2.5rem);margin-bottom:8px}
+.sec h2 small{font-size:.75em;color:var(--brass);margin-right:14px}
+.sub{opacity:.7;margin-bottom:38px}
+.menu{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{border:1px solid var(--line);border-radius:6px;padding:24px;background:#FCFEFF;transition:.3s}
+.card::before{content:"✦";color:var(--brass);display:block;margin-bottom:12px;font-size:12px}
+.card:hover{transform:translateY(-5px);box-shadow:0 18px 32px rgba(14,58,83,.14);border-color:var(--wave)}
+.card h3{font-family:'Prata',serif;font-size:19px;margin-bottom:6px}
+.card p{font-size:14px;opacity:.72}
+.price{display:inline-block;margin-top:14px;font-weight:600;color:var(--wave);border-top:1px solid var(--line);padding-top:8px;width:100%}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.about img{width:100%;height:320px;object-fit:cover;border-radius:16px;border:1px solid var(--sea);outline:1px solid var(--sea);outline-offset:6px}
+.about ul{margin-top:20px;list-style:none}
+.about li{padding:11px 0;border-bottom:1px solid var(--line)}
+.about li::before{content:"— ";color:var(--brass)}
+.rev{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.rev figure{border:1px solid var(--line);border-radius:6px;padding:26px;background:#FCFEFF;position:relative}
+.rev figure::before{content:"«";font-family:'Prata',serif;font-size:44px;color:var(--sky);position:absolute;top:8px;left:18px;line-height:1}
+.rev p{font-size:14.5px;padding-top:22px}
+.rev b{display:block;margin-top:14px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--wave)}
+.book{background:var(--sea);color:var(--foam);border-radius:8px;padding:54px;
+  display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;
+  border:1px solid var(--sea);outline:1px solid var(--wave);outline-offset:-10px}
+.book h2{font-size:2.1rem;margin-bottom:12px}
+.book p{opacity:.85}
+.book form{display:grid;gap:12px}
+.book input,.book select{padding:13px 14px;border-radius:2px;border:0;font:15px 'Golos Text',sans-serif;background:var(--foam);color:var(--ink)}
+.book .btn{background:var(--brass)}
+.book .btn:hover{background:var(--foam);color:var(--sea)}
+#ok{display:none;font-size:1.1rem;line-height:1.6}
+.foot-info{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:64px 0}
+.foot-info h4{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--wave);margin-bottom:10px}
+footer{border-top:3px double var(--sea);padding:24px 0;font-size:13px}
+footer a{color:var(--wave)}
+@media(max-width:860px){.hero,.about,.book{grid-template-columns:1fr}.menu,.rev{grid-template-columns:1fr 1fr}.foot-info{grid-template-columns:1fr}.book{padding:36px 24px}}
+@media(max-width:560px){.menu,.rev{grid-template-columns:1fr}nav{display:none}}
+</style>
+</head>
+<body>
+
+<!-- шапка сайта кофейни -->
+<header><div class="wrap hd">
+  <span class="logo">Кофейня <b>у моря</b> <i>✦</i></span>
+  <nav><a href="#menu">Меню</a><a href="#about">О нас</a><a href="#rev">Отзывы</a><a href="#book">Бронь</a></nav>
+  <a class="btn" href="#book" style="padding:10px 18px">Столик</a>
+</div></header>
+
+<!-- первый экран -->
+<section class="wrap hero">
+  <div>
+    <span class="tag">Владивосток · Японское море · набережная, 12</span>
+    <h1>Кофе с видом на <em>море</em></h1>
+    <p>Свежая обжарка, десерты из своей печи и веранда среди старых европейских фасадов. Приходите на рассвете — сопки, вода и первый фильтр дня.</p>
+    <div class="hero-btns">
+      <a class="btn" href="#menu">Смотреть меню</a>
+      <a class="btn btn-o" href="#book">Забронировать столик</a>
+    </div>
+  </div>
+  <div class="hero-img"><img src="img/coffee-veranda.jpg" alt="Веранда с видом на море" data-ph="фото веранды — скоро своё"></div>
+</section>
+
+<!-- волна и бегущая строка -->
+<div class="wave" aria-hidden="true">
+  <svg viewBox="0 0 1440 60" preserveAspectRatio="none"><path d="M0 32 C120 56 240 8 360 32 C480 56 600 8 720 32 C840 56 960 8 1080 32 C1200 56 1320 8 1440 32 L1440 60 L0 60 Z" fill="#0E3A53"/></svg>
+</div>
+<div class="tick"><div>свежая обжарка<em>✦</em>десерты каждый день<em>✦</em>вид на Японское море<em>✦</em>с собаками можно<em>✦</em>wifi и розетки<em>✦</em>свежая обжарка<em>✦</em>десерты каждый день<em>✦</em>вид на Японское море<em>✦</em>с собаками можно<em>✦</em>wifi и розетки<em>✦</em></div></div>
+
+<!-- меню -->
+<section class="wrap sec" id="menu">
+  <h2><small>I.</small>Меню</h2>
+  <p class="sub">Короткое, зато всё своё.</p>
+  <div class="menu">
+    <div class="card"><h3>Раф «Морской»</h3><p>С солёной карамелью и щепоткой тимьяна</p><span class="price">320 ₽</span></div>
+    <div class="card"><h3>Капучино</h3><p>На зерне местной обжарки, молоко по умолчанию</p><span class="price">260 ₽</span></div>
+    <div class="card"><h3>Фильтр дня</h3><p>Меняется каждое утро, спрашивайте у бариста</p><span class="price">220 ₽</span></div>
+    <div class="card"><h3>Матча-латте</h3><p>Церемониальная матча, можно на овсяном</p><span class="price">290 ₽</span></div>
+    <div class="card"><h3>Сырники</h3><p>Со сметаной и ягодами, из печи с 8 утра</p><span class="price">340 ₽</span></div>
+    <div class="card"><h3>Десерт дня</h3><p>Что получилось у кондитера — то и счастье</p><span class="price">250 ₽</span></div>
+  </div>
+</section>
+
+<!-- о кофейне -->
+<section class="wrap sec about" id="about">
+  <img src="img/coffee-beans.jpg" alt="Зерно и печь" data-ph="фото зерна и печи">
+  <div>
+    <h2><small>II.</small>Маленькая кофейня с большим видом</h2>
+    <p>Мы открылись в 2024-м в старом доме с арками — с одной кофемашиной и мечтой. Сейчас у нас своя печь, зерно приморской обжарки и гости, которые приходят с собаками, ноутбуками и книгами.</p>
+    <ul>
+      <li>зерно обжаривают в Приморье, не старше 14 дней</li>
+      <li>выпечка выходит из печи в 8:00 и 13:00</li>
+      <li>веранда с пледом — да, даже в октябре</li>
+    </ul>
+  </div>
+</section>
+
+<!-- отзывы гостей -->
+<section class="wrap sec" id="rev">
+  <h2><small>III.</small>Говорят гости</h2>
+  <p class="sub">Настоящие отзывы из книги на кассе.</p>
+  <div class="rev">
+    <figure><p>Раф морской — это преступление, настолько вкусно. Прихожу третьи выходные подряд.</p><b>Катя</b></figure>
+    <figure><p>Единственное место, где мне не мешают работать с видом на воду и сопки.</p><b>Дмитрий</b></figure>
+    <figure><p>Сырники ради сырников. Ехала с другого конца города — не жалею.</p><b>Алина</b></figure>
+  </div>
+</section>
+
+<!-- форма бронирования -->
+<section class="wrap sec" id="book">
+  <div class="book">
+    <div>
+      <h2>Забронировать столик</h2>
+      <p>Оставьте заявку — подтвердим в течение часа в рабочее время. Это демо-версия сайта, поэтому заявка никуда не отправляется.</p>
+    </div>
+    <form id="bf">
+      <input type="text" placeholder="Имя" required>
+      <input type="tel" placeholder="Телефон" required>
+      <input type="date" required>
+      <select><option>2 гостя</option><option>1 гость</option><option>3–4 гостя</option><option>компания 5+</option></select>
+      <button class="btn" type="submit">Забронировать</button>
+    </form>
+    <div id="ok">✦ Столик забронирован!<br>Мы бы уже подтвердили заявку — но это демо. В боевой версии здесь работает форма, которую подключит наша студия.</div>
+  </div>
+</section>
+
+<!-- контакты кофейни -->
+<div class="wrap foot-info">
+  <div><h4>адрес</h4>Владивосток,<br>набережная, 12</div>
+  <div><h4>часы</h4>ежедневно<br>8:00 – 22:00</div>
+  <div><h4>связь</h4>+7 900 000-00-00<br>hello@umorya.cafe</div>
+</div>
+
+<!-- подвал -->
+<footer><div class="wrap" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px">
+  <span>© 2026 Кофейня у моря</span>
+  <span>сайт сделан веб-студией <a href="index.html">TRES*</a></span>
+</div></footer>
+
+<script>
+// обработка формы бронирования
+document.getElementById('bf').addEventListener('submit', e => {
+  e.preventDefault();
+  e.target.style.display = 'none';
+  document.getElementById('ok').style.display = 'block';
+});
+// заглушки для фото
+document.querySelectorAll('img').forEach(i => i.addEventListener('error', () => {
+  const ph = document.createElement('div');
+  ph.className = 'ph';
+  ph.textContent = i.dataset.ph || 'фото скоро';
+  i.replaceWith(ph);
+}));
+</script>
+</body>
+</html>

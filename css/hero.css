@@ -1,0 +1,35 @@
+/* ═══════════ ПЕРВЫЙ ЭКРАН ═══════════ */
+.hero{position:relative;padding:150px 0 90px;min-height:92svh;display:flex;align-items:center;
+  background-image:radial-gradient(rgba(24,22,17,.09) 1px,transparent 1px);background-size:26px 26px}
+
+.hero-tag{font-size:12px;letter-spacing:.14em;text-transform:uppercase;opacity:.85;margin-bottom:34px;display:flex;align-items:center;gap:12px}
+.hero-tag::before{content:"";width:34px;height:1.5px;background:var(--acc)}
+
+.hero-h{font-family:var(--disp);font-weight:800;text-transform:uppercase;line-height:.98;letter-spacing:-.01em;
+  font-size:clamp(2.7rem,9vw,8.2rem);max-width:12ch}
+
+.hero-row{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-top:52px;flex-wrap:wrap}
+.hero-p{max-width:44ch;font-size:clamp(1rem,1.4vw,1.2rem)}
+.hero-side{display:flex;align-items:center;gap:34px}
+
+/* статус «открыты к проектам» */
+.status{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:12px;letter-spacing:.06em;
+  border:1px solid var(--ink);border-radius:999px;padding:10px 18px;background:var(--card)}
+.status i{width:9px;height:9px;border-radius:50%;background:var(--acc);animation:blink 1.6s ease-in-out infinite}
+@keyframes blink{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(255,77,28,.5)}50%{opacity:.4;box-shadow:0 0 0 6px rgba(255,77,28,0)}}
+
+/* вращающийся круговой бейдж */
+.rot{width:112px;height:112px;position:relative;flex:none}
+.rot svg{width:100%;height:100%;animation:spin 14s linear infinite}
+.rot text{font-family:var(--mono);font-size:10.4px;letter-spacing:.22em;fill:var(--ink);text-transform:uppercase}
+.rot b{position:absolute;inset:0;display:grid;place-items:center;font-size:26px;color:var(--acc)}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* полароиды на фоне */
+.polaroid{position:absolute;background:#fff;padding:10px 10px 30px;box-shadow:0 18px 40px rgba(24,22,17,.18);
+  transform:rotate(var(--r));width:230px;display:none;z-index:0}
+.polaroid img{width:100%;height:150px;object-fit:cover;filter:saturate(.9)}
+.polaroid figcaption{font-family:var(--mono);font-size:11px;padding-top:8px;opacity:.7}
+.pl-a{right:5%;top:19%}
+.pl-b{right:15%;top:55%;width:200px}
+@media(min-width:1100px){.polaroid{display:block}}

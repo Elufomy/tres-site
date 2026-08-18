@@ -1,0 +1,36 @@
+/* ═══════════ УСЛУГИ (аккордеон) ═══════════ */
+.services{padding:90px 0}
+
+.services .srv{border-top:1px solid var(--ink)}
+.services .srv:last-of-type{border-bottom:1px solid var(--ink)}
+
+.services .srv-btn{display:grid;grid-template-columns:60px 1fr auto 40px;align-items:center;
+  gap:18px;width:100%;padding:26px 8px;text-align:left;transition:background .3s,padding .3s}
+.services .srv-btn:hover{background:var(--card);padding-left:18px}
+
+.services .srv-idx{font-size:12px;color:var(--acc)}
+.services .srv-name{font-family:var(--disp);font-weight:700;text-transform:uppercase;
+  font-size:clamp(1.05rem,2.4vw,1.5rem)}
+.services .srv-price{font-size:13px;letter-spacing:.06em;opacity:.75}
+.services .srv-plus{font-family:var(--mono);font-size:22px;text-align:center;
+  transition:transform .4s;color:var(--acc)}
+.services .srv.open .srv-plus{transform:rotate(45deg)}
+
+.services .srv-panel{max-height:0;overflow:hidden;transition:max-height .5s cubic-bezier(.2,.7,.2,1)}
+.services .srv-panel-in{padding:0 8px 30px 78px;max-width:860px}
+
+.services .srv-panel-in p{margin:0 0 18px;font-size:15.5px;line-height:1.65;opacity:.85}
+.services .srv-tags{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 16px}
+.services .srv-tags span{display:inline-block;border:1px solid var(--line);border-radius:999px;
+  padding:5px 12px;font-size:11px;font-family:var(--mono)}
+.services .srv-time{display:block;margin-top:4px;font-size:12px;opacity:.7}
+
+.services .srv-foot{margin-top:34px;font-size:15px;opacity:.75}
+
+@media(max-width:760px){
+  .services .srv-btn{grid-template-columns:40px 1fr 30px}
+  .services .srv-name{grid-column:2}
+  .services .srv-plus{grid-column:3;grid-row:1}
+  .services .srv-price{grid-column:2;grid-row:2;justify-self:start}
+  .services .srv-panel-in{padding-left:8px}
+}

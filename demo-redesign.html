@@ -1,0 +1,95 @@
+<!-- демо: до/после, пельменная -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Редизайн «Пельменная» · до/после — TRES*</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0}
+body{font-family:'Golos Text',sans-serif}
+.switch{position:fixed;top:14px;right:14px;z-index:50;background:#181510;color:#EFE8DA;border:0;
+  border-radius:2px;padding:13px 22px;font:600 12px 'Oswald',sans-serif;text-transform:uppercase;
+  letter-spacing:.18em;cursor:pointer;transition:.3s;box-shadow:0 10px 24px rgba(24,21,16,.3)}
+.switch:hover{background:#C63B2A}
+
+/* старая версия: жёлтый фон и comic sans */
+.old{background:#FFFFB8;color:#0000EE;font-family:'Times New Roman',serif;padding:70px 16px 50px;text-align:center}
+.old h1{font-family:'Comic Sans MS',cursive;color:#FF0000;font-size:2rem}
+.old .addr{font-size:12px}
+.old ul{list-style:none;margin:20px auto;max-width:340px;text-align:left}
+.old li{border:2px ridge #808080;margin:6px 0;padding:6px;background:#fff}
+.old b{color:#0000EE}
+.old .call{color:#FF0000;font-weight:bold}
+
+/* новая версия: киноварь, конструктивизм */
+.new{background:#EFE8DA;color:#181510;padding:90px 16px 70px}
+.new .in{max-width:780px;margin:auto}
+.new .addr{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.24em;font-size:12px;color:#C63B2A}
+.new h1{font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;
+  font-size:clamp(2.4rem,7vw,4.2rem);line-height:1.02;margin:12px 0 14px}
+.new h1 b{color:#C63B2A}
+.new .lead{max-width:56ch;opacity:.85;margin-bottom:18px}
+.new .stamp{display:inline-block;border:2px solid #C63B2A;color:#C63B2A;font-family:'Oswald',sans-serif;
+  text-transform:uppercase;letter-spacing:.2em;font-size:11px;padding:7px 14px;
+  transform:rotate(-3deg);margin-bottom:26px}
+.new ul{list-style:none;border-top:3px solid #181510}
+.new li{display:flex;justify-content:space-between;gap:18px;padding:15px 2px;border-bottom:1px dashed rgba(24,21,16,.45)}
+.new .nm{font-family:'Oswald',sans-serif;text-transform:uppercase;font-size:15px;font-weight:500}
+.new li span{display:block;opacity:.7;font-size:13px;margin-top:2px}
+.new .pr{font-family:'Oswald',sans-serif;font-weight:600;color:#C63B2A;white-space:nowrap;font-size:16px}
+.new .btn{display:inline-block;margin-top:28px;background:#181510;color:#EFE8DA;border-radius:2px;
+  padding:14px 30px;font:600 13px 'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.18em}
+.new .btn:hover{background:#C63B2A}
+.new .credit{margin-top:44px;font-size:12px;opacity:.6}
+.new .credit a{color:#C63B2A}
+</style>
+</head>
+<body>
+
+<!-- кнопка переключения версий -->
+<button class="switch" id="sw">показать «как стало» ✦</button>
+
+<!-- старая версия сайта -->
+<div id="page" class="old">
+  <p class="addr">г. Владивосток, ул. Светланская, д. 7, тел. 8 (423) 222-22-22</p>
+  <h1>ДОБРО ПОЖАЛОВАТЬ В ПЕЛЬМЕННУЮ!!!</h1>
+  <p>Мы работаем с 1998 года. Пельмени. Манты. Чай.</p>
+  <ul>
+    <li>Пельмени классические — <b>250 р.</b></li>
+    <li>Пельмени с мясом — <b>270 р.</b></li>
+    <li>Манты — <b>300 р.</b></li>
+    <li>Чай в пакетиках — <b>50 р.</b></li>
+  </ul>
+  <p class="call">Звоните!!! Администратор с 9 до 18, обед с 13 до 14.</p>
+</div>
+
+<script>
+// переключение между старой и новой версиями
+const page = document.getElementById('page'), sw = document.getElementById('sw');
+const OLD = page.innerHTML;
+const NEW = `
+<div class="in">
+  <p class="addr">★ Владивосток · Светланская, 7</p>
+  <h1>Пельменная <b>№ 1</b></h1>
+  <p class="lead">Лепим каждое утро. Тесто тонкое, начинки — из приморских фермерских хозяйств. Без брони: просто приходите голодными.</p>
+  <span class="stamp">лепим с 1998 года</span>
+  <ul>
+    <li><div><span class="nm">Пельмени классические</span><span>говядина + лук, сметана</span></div><span class="pr">290 ₽</span></li>
+    <li><div><span class="nm">Пельмени с индейкой</span><span>зелёное масло, бульон в подарок</span></div><span class="pr">310 ₽</span></li>
+    <li><div><span class="nm">Манты с ягнёнком</span><span>подаются с катыком</span></div><span class="pr">340 ₽</span></li>
+    <li><div><span class="nm">Иван-чай</span><span>завариваем сами, мёд с пасеки</span></div><span class="pr">120 ₽</span></li>
+  </ul>
+  <a class="btn" href="#">Как нас найти</a>
+  <p class="credit">редизайн — веб-студия <a href="index.html">TRES*</a></p>
+</div>`;
+sw.addEventListener('click', () => {
+  const toNew = page.classList.contains('old');
+  page.className = toNew ? 'new' : 'old';
+  page.innerHTML = toNew ? NEW : OLD;
+  sw.textContent = toNew ? 'показать «как было» ✦' : 'показать «как стало» ✦';
+});
+</script>
+</body>
+</html>

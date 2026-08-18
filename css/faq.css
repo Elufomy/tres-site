@@ -1,0 +1,19 @@
+/* ═══════════ ЧЕСТНЫЕ ВОПРОСЫ ═══════════ */
+.faq{padding:110px 0}
+
+.faq-list{border-top:1px solid var(--ink)}
+.faq details{border-bottom:1px solid var(--ink)}
+
+/* строка-вопрос */
+.faq summary{display:flex;justify-content:space-between;align-items:center;gap:20px;
+  padding:26px 4px;cursor:pointer;list-style:none;transition:padding .3s}
+.faq summary::-webkit-details-marker{display:none}   /* убираем родной треугольник */
+.faq summary:hover{padding-left:14px}
+.faq summary h3{font-family:var(--disp);font-weight:500;text-transform:uppercase;
+  font-size:clamp(1rem,2.2vw,1.35rem);line-height:1.25}
+.faq .q-plus{font-family:var(--mono);font-size:22px;color:var(--acc);flex:none;transition:transform .35s}
+.faq details[open] .q-plus{transform:rotate(45deg)}
+
+/* ответ */
+.faq .faq-a{padding:0 4px 28px;max-width:64ch;opacity:.85;animation:faqIn .4s ease}
+@keyframes faqIn{from{opacity:0;transform:translateY(8px)}to{opacity:.85;transform:none}}

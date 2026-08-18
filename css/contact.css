@@ -1,0 +1,43 @@
+/* ═══════════ КОНТАКТЫ + ФОРМА ═══════════ */
+.contact{background:var(--acc);color:var(--ink);border-top:1px solid var(--ink);padding:110px 0}
+.contact .sec-idx{color:var(--ink);opacity:.65}
+.contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:70px;align-items:start}
+
+.contact-left p{max-width:36ch;margin-top:22px;font-size:1.05rem}
+.contact-rows{margin-top:36px;border-top:1px solid rgba(24,22,17,.4)}
+.c-row{display:flex;justify-content:space-between;align-items:baseline;gap:20px;
+  padding:16px 2px;border-bottom:1px solid rgba(24,22,17,.4)}
+.c-row span{font-size:12px;letter-spacing:.1em;text-transform:uppercase;opacity:.7}
+.c-row b{font-size:clamp(1rem,2vw,1.25rem)}
+a.c-row:hover b{text-decoration:underline;text-underline-offset:4px}
+
+/* форма */
+.contact-form{display:flex;flex-direction:column;gap:22px}
+.contact-form label{display:flex;flex-direction:column;gap:8px;font-family:var(--mono);font-size:12px;
+  letter-spacing:.1em;text-transform:uppercase}
+.contact-form input,.contact-form textarea{font-family:var(--body);font-size:16px;color:var(--ink);
+  background:transparent;border:0;border-bottom:2px solid var(--ink);padding:10px 2px;resize:vertical;transition:border-color .3s}
+.contact-form input::placeholder,.contact-form textarea::placeholder{color:rgba(24,22,17,.45)}
+.contact-form input:focus,.contact-form textarea:focus{outline:none;border-bottom-color:var(--paper)}
+
+.f-lbl{font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{font-family:var(--mono);font-size:12px;letter-spacing:.06em;border:1.5px solid var(--ink);
+  border-radius:999px;padding:9px 18px;transition:background .3s,color .3s,transform .2s}
+.chip:hover{transform:translateY(-2px)}
+.chip.on{background:var(--ink);color:var(--paper)}
+.contact-form .btn{align-self:flex-start;background:var(--ink);border-color:var(--ink)}
+.contact-form .btn:hover{background:var(--paper);color:var(--ink);border-color:var(--ink)}
+
+/* состояние «отправлено» */
+.form-done{display:none;grid-column:2;align-self:center;justify-self:center;text-align:center;
+  border:1.5px dashed var(--ink);border-radius:12px;padding:54px 40px;max-width:440px}
+.form-done b{font-family:var(--disp);font-size:1.6rem;text-transform:uppercase;display:block;margin-bottom:14px}
+.contact.sent .contact-form{display:none}
+.contact.sent .form-done{display:block;animation:pop .5s cubic-bezier(.2,.7,.2,1)}
+@keyframes pop{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:none}}
+
+@media(max-width:860px){
+  .contact-grid{grid-template-columns:1fr;gap:44px}
+  .form-done{grid-column:1}
+}

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <title>TRES* — лендинги под ключ для малого бизнеса</title>
+  <meta name="description" content="Веб-студия TRES: три студентки из Приморья делают сайты и лендинги, которые хочется тыкать.">
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;700;800&family=Golos+Text:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/works.css">
+  <link rel="stylesheet" href="css/services.css">
+  <link rel="stylesheet" href="css/process.css">
+  <link rel="stylesheet" href="css/team.css">
+  <link rel="stylesheet" href="css/faq.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+
+  <div class="noise" aria-hidden="true"></div>
+  <div id="cur" aria-hidden="true"><span id="curT"></span></div>
+
+  <!-- шапка -->
+  <header id="hd">
+    <div class="container hd-in">
+      <a class="logo" href="#top">TRES<span>*</span></a>
+      <nav class="hd-nav">
+        <a href="#works">Работы</a>
+        <a href="#services">Услуги</a>
+        <a href="#process">Процесс</a>
+        <a href="#team">Команда</a>
+        <a href="#faq">Вопросы</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+      <div class="hd-right">
+        <span class="clock mono" id="clock">ВЛК · --:--</span>
+        <a href="#contact" class="btn">Обсудить проект</a>
+        <button class="burger" id="burger" aria-label="Открыть меню"><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- мобильное меню -->
+  <nav class="mnav" id="mnav" aria-label="Мобильное меню">
+    <a href="#works">Работы <i>01</i></a>
+    <a href="#services">Услуги <i>02</i></a>
+    <a href="#process">Процесс <i>03</i></a>
+    <a href="#team">Команда <i>04</i></a>
+    <a href="#faq">Вопросы <i>05</i></a>
+    <a href="#contact">Контакты <i>06</i></a>
+  </nav>
+
+  <main id="top">
+
+    <!-- первый экран -->
+    <section class="hero">
+      <div class="container">
+        <p class="hero-tag mono" data-scramble>независимая веб-студия ✦ приморский край ✦ нас трое</p>
+        <h1 class="hero-h">
+          <span class="lm"><span style="--d:0s">Сайты,</span></span>
+          <span class="lm"><span style="--d:.08s">которые</span></span>
+          <span class="lm"><span style="--d:.16s">хочется <em class="acc-em">тыкать</em></span></span>
+        </h1>
+        <div class="hero-row">
+          <p class="hero-p rv">TRES — «три» по-испански. Мы — Вика, Настя и Тоня, три студентки из Приморья. Собираем лендинги и сайты для малого бизнеса: старательно, по честной цене и ровно в срок.</p>
+          <div class="hero-side">
+            <span class="status rv" style="--d:.15s"><i></i>открыты к первым заказам</span>
+            <div class="rot" aria-hidden="true">
+              <svg viewBox="0 0 100 100">
+                <defs><path id="circ" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0"/></defs>
+                <text font-size="10" letter-spacing="2">
+                  <textPath href="#circ" textLength="239" lengthAdjust="spacingAndGlyphs">работы ниже • листайте вниз • </textPath>
+                </text>
+              </svg>
+              <b>↓</b>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figure class="polaroid pl-a" style="--r:-6deg" data-par="0.05">
+        <img src="img/moodboard.jpg" alt="Наш мудборд" data-ph="мудборд">
+        <figcaption>наш стол в процессе</figcaption>
+      </figure>
+      <figure class="polaroid pl-b" style="--r:4deg" data-par="-0.04">
+        <img src="img/wireframes.jpg" alt="Наброски прототипа" data-ph="вайрфреймы">
+        <figcaption>наброски от руки</figcaption>
+      </figure>
+    </section>
+
+    <div class="mq mq-ink" aria-hidden="true">
+      <div class="mq-track">
+        <div class="mq-in"><span>Лендинги под ключ <em>✦</em> Сайты для малого бизнеса <em>✦</em> Редизайн <em>✦</em> Макеты в Figma <em>✦</em> Telegram-боты <em>✦</em> Поддержка <em>✦</em></span></div>
+        <div class="mq-in"><span>Лендинги под ключ <em>✦</em> Сайты для малого бизнеса <em>✦</em> Редизайн <em>✦</em> Макеты в Figma <em>✦</em> Telegram-боты <em>✦</em> Поддержка <em>✦</em></span></div>
+      </div>
+    </div>
+
+    <!-- портфолио -->
+    <section id="works" class="works container">
+      <div class="sec-head">
+        <div>
+          <span class="sec-idx mono" data-scramble>01 / работы</span>
+          <h2 class="sec-title lm"><span>Портфолио</span></h2>
+        </div>
+        <p class="sec-note rv">Коммерческих заказов у нас пока нет — честно показываем концепты, чтобы вы видели, как мы мыслим.</p>
+      </div>
+
+      <div class="works-grid">
+
+        <article class="work work--wide rv">
+          <div class="work-img" data-cursor="смотреть">
+            <img src="img/coffee-main.jpg" alt="Кофейня у моря" data-ph="живое демо — внутри кейса ✦ кофейня у моря">
+            <span class="work-num mono">№ 01 · концепт</span>
+          </div>
+          <div class="work-body">
+            <h3 class="work-title">«Кофейня у моря»</h3>
+            <p class="work-desc">Концепт лендинга для кофейни на набережной: от прототипа до анимаций. Придумали, нарисовали, сверстали сами.</p>
+            <div class="work-tags"><span>лендинг</span> <span>figma</span> <span>вёрстка</span></div>
+            <div class="work-result">
+              <b>структура · дизайн · код</b>
+              <span class="mono">концепт · 2026</span>
+            </div>
+            <a class="work-link" href="case-coffee.html">Смотреть кейс <span>↗</span></a>
+          </div>
+        </article>
+
+        <article class="work rv" style="--d:.1s">
+          <div class="work-img work-img-split" data-cursor="смотреть">
+            <figure>
+              <div class="ph ph-old">ДОБРО ПОЖАЛОВАТЬ!!! жёлтый фон · times new roman</div>
+              <figcaption class="mono">до</figcaption>
+            </figure>
+            <figure>
+              <img src="img/redesign-after.jpg" alt="Пельменная после редизайна" data-ph="меню на первом экране · читаемые цены · характер" onerror="this.remove()">
+              <figcaption class="mono">после</figcaption>
+            </figure>
+            <span class="work-num mono">№ 02 · концепт</span>
+          </div>
+          <div class="work-body">
+            <h3 class="work-title">Редизайн: кафе «Пельменная»</h3>
+            <p class="work-desc">Взяли типичный устаревший сайт и показали, каким он мог бы стать. Интерактивное «до/после» — внутри кейса.</p>
+            <div class="work-tags"><span>редизайн</span> <span>figma</span> <span>прототип</span></div>
+            <div class="work-result">
+              <b>аудит · прототип · новый дизайн</b>
+              <span class="mono">концепт · 2026</span>
+            </div>
+            <a class="work-link" href="case-redesign.html">Смотреть кейс <span>↗</span></a>
+          </div>
+        </article>
+
+        <article class="work rv" style="--d:.2s">
+          <div class="work-img" data-cursor="смотреть">
+            <img src="img/salon-main.jpg" alt="Салон красоты" data-ph="рабочее демо: форма · проверка слотов · мини-админка">
+            <span class="work-num mono">№ 03 · концепт</span>
+          </div>
+          <div class="work-body">
+            <h3 class="work-title">Онлайн-запись для салона</h3>
+            <p class="work-desc">Клиент выбирает мастера и время, сайт не даёт записаться в занятый слот, админ видит все заявки. Без сторонних конструкторов.</p>
+            <div class="work-tags"><span>бэкенд</span> <span>php</span> <span>mysql</span></div>
+            <div class="work-result">
+              <b>бд · логика · защита от двойных записей</b>
+              <span class="mono">концепт · 2026</span>
+            </div>
+            <a class="work-link" href="case-booking.html">Смотреть кейс <span>↗</span></a>
+          </div>
+        </article>
+
+        <article class="work work-empty rv" style="--d:.3s">
+          <span class="work-num mono">№ 04</span>
+          <h3 class="work-title">Здесь будет ваш проект</h3>
+          <p class="work-desc">Этот слот мы держим свободным для первого коммерческого кейса. Хотите, чтобы им стали вы?</p>
+          <a href="#contact" class="btn">Занять этот слот</a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- услуги и цены -->
+    <section id="services" class="services">
+      <div class="container">
+        <div class="sec-head">
+          <div>
+            <span class="sec-idx mono" data-scramble>02 / услуги</span>
+            <h2 class="sec-title lm"><span>Что мы делаем</span></h2>
+          </div>
+          <p class="sec-note rv">Мы молодая студия и нарабатываем портфолио, поэтому цены честные. Точную смету считаем после брифа — бесплатно.</p>
+        </div>
+
+        <div class="srv">
+          <button class="srv-btn" aria-expanded="false">
+            <span class="srv-idx mono">01</span>
+            <span class="srv-name">Лендинг под ключ</span>
+            <span class="srv-price mono">от 35 000 ₽</span>
+            <span class="srv-plus">+</span>
+          </button>
+          <div class="srv-panel"><div class="srv-panel-in">
+            <p>Наш главный продукт. За 10–14 дней собираем одностраничник: структура, дизайн, вёрстка, формы заявок и аналитика. По желанию — добавим телеграм-бота для приёма заявок.</p>
+            <div class="srv-tags"><span>бриф и анализ</span> <span>прототип</span> <span>дизайн</span> <span>вёрстка</span> <span>формы и аналитика</span> <span>телеграм-бот (опция)</span></div>
+            <span class="srv-time mono">⏱ 10–14 дней · бонус: поможем запустить рекламу</span>
+          </div></div>
+        </div>
+
+        <div class="srv">
+          <button class="srv-btn" aria-expanded="false">
+            <span class="srv-idx mono">02</span>
+            <span class="srv-name">Редизайн сайта</span>
+            <span class="srv-price mono">от 20 000 ₽</span>
+            <span class="srv-plus">+</span>
+          </button>
+          <div class="srv-panel"><div class="srv-panel-in">
+            <p>Разберём ваш текущий сайт, найдём слабые места и обновим: свежий вид, понятная структура и мобильная версия, которая не разваливается.</p>
+            <div class="srv-tags"><span>аудит</span> <span>новая структура</span> <span>дизайн</span> <span>адаптив</span></div>
+            <span class="srv-time mono">⏱ 7–12 дней</span>
+          </div></div>
+        </div>
+
+        <div class="srv">
+          <button class="srv-btn" aria-expanded="false">
+            <span class="srv-idx mono">03</span>
+            <span class="srv-name">Дизайн-макет в Figma</span>
+            <span class="srv-price mono">от 15 000 ₽</span>
+            <span class="srv-plus">+</span>
+          </button>
+          <div class="srv-panel"><div class="srv-panel-in">
+            <p>Если верстать будете сами — нарисуем макет: концепция, все экраны, аккуратный UI-кит и передача исходников.</p>
+            <div class="srv-tags"><span>концепция</span> <span>десктоп + мобайл</span> <span>UI-кит</span> <span>исходники</span></div>
+            <span class="srv-time mono">⏱ 5–8 дней</span>
+          </div></div>
+        </div>
+
+        <div class="srv">
+          <button class="srv-btn" aria-expanded="false">
+            <span class="srv-idx mono">04</span>
+            <span class="srv-name">Поддержка и доработки</span>
+            <span class="srv-price mono">от 8 000 ₽</span>
+            <span class="srv-plus">+</span>
+          </button>
+          <div class="srv-panel"><div class="srv-panel-in">
+            <p>Сайт уже есть, но чего-то не хватает: новые блоки, правки, подключение форм, домен и хостинг. Небольшой объём — быстрый результат. Можем и телеграм-бота для приёма заявок прикрутить.</p>
+            <div class="srv-tags"><span>правки</span> <span>новые блоки</span> <span>формы</span> <span>домен и хостинг</span> <span>телеграм-бот (опция)</span></div>
+            <span class="srv-time mono">⏱ от 3 дней</span>
+          </div></div>
+        </div>
+
+        <p class="srv-foot rv">Не нашли своё? Напишите — честно скажем, возьмёмся или подскажем, к кому идти.</p>
+      </div>
+    </section>
+
+    <!-- как мы работаем -->
+    <section id="process" class="process container">
+      <div class="process-left">
+        <span class="sec-idx mono" data-scramble>03 / процесс</span>
+        <h2 class="sec-title lm"><span>Как мы делаем лендинг</span></h2>
+        <p class="sec-note rv">Пять понятных этапов. На каждом показываем результат и ждём вашего «ок» — ничего не уходит втихую.</p>
+      </div>
+      <div class="process-right">
+        <div class="step rv"><span class="step-num">01</span><div><h3>Бриф и смета</h3><p>Созвон на час: вопросы про бизнес, цели и аудиторию. Через 2 дня — план, сроки и точная цена.</p><span class="dur mono">≈ 2 дня</span></div></div>
+        <div class="step rv" style="--d:.05s"><span class="step-num">02</span><div><h3>Прототип</h3><p>Собираем скелет сайта: какие блоки, в каком порядке и что они говорят посетителю.</p><span class="dur mono">2–3 дня</span></div></div>
+        <div class="step rv" style="--d:.1s"><span class="step-num">03</span><div><h3>Дизайн-концепция</h3><p>Две концепции на выбор. Одну доводим до финального макета всех экранов.</p><span class="dur mono">4–5 дней</span></div></div>
+        <div class="step rv" style="--d:.15s"><span class="step-num">04</span><div><h3>Вёрстка и запуск</h3><p>Верстаем, подключаем формы и аналитику, тестируем на телефонах и выкладываем на ваш домен.</p><span class="dur mono">4–6 дней</span></div></div>
+        <div class="step rv" style="--d:.2s"><span class="step-num">05</span><div><h3>После запуска</h3><p>Две недели бесплатных правок и подсказки, как смотреть статистику. Дальше — помощь по желанию.</p><span class="dur mono">14 дней с нами</span></div></div>
+      </div>
+    </section>
+
+    <!-- команда -->
+    <section id="team" class="team container">
+      <div class="sec-head">
+        <div>
+          <span class="sec-idx mono" data-scramble>04 / команда</span>
+          <h2 class="sec-title lm"><span>Нас трое — и мы из Приморья</span></h2>
+        </div>
+        <p class="sec-note rv">TRES — «три» по-испански, и это не случайно: смысл, дизайн и код — три слоя, и нас трое. Мы студентки после 2-го курса: делаем старательно, берём недорого и всегда на связи.</p>
+      </div>
+      <div class="team-grid">
+        <article class="mate rv" style="--r:-1.6deg">
+          <div class="mate-photo"><img src="img/vika.jpg" alt="Вика" data-ph="В" data-ph-class="ph-init"></div>
+          <h3>Вика</h3>
+          <p class="mate-role">фронтенд · интерфейсы</p>
+          <p class="mate-quote">«Переводит макет в код один в один»</p>
+          <p class="mate-meta mono">figma · вёрстка · поможет запустить рекламу</p>
+        </article>
+        <article class="mate rv" style="--r:1.2deg; --d:.1s">
+          <div class="mate-photo"><img src="img/nastya.jpg" alt="Настя" data-ph="Н" data-ph-class="ph-init"></div>
+          <h3>Настя</h3>
+          <p class="mate-role">менеджер · дизайн · 3d</p>
+          <p class="mate-quote">«Держит всех в сроках и лепит миры в Blender»</p>
+          <p class="mate-meta mono">общение с клиентами · figma · blender</p>
+        </article>
+        <article class="mate rv" style="--r:-1deg; --d:.2s">
+          <div class="mate-photo mate-incognito">
+            <svg viewBox="0 0 120 120" aria-hidden="true">
+              <circle cx="60" cy="44" r="21"/>
+              <path d="M18 104c7-28 24-37 42-37s35 9 42 37z"/>
+            </svg>
+            <span class="incog-note mono">инкогнито</span>
+          </div>
+          <h3>Тоня</h3>
+          <p class="mate-role">главная по бэкенду</p>
+          <p class="mate-quote">«Чтобы всё работало, даже когда все спят»</p>
+          <p class="mate-meta mono">базы данных · php · api</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="container stats-in">
+        <div class="num"><b data-count="3">0</b><span class="mono">нас в команде</span></div>
+        <div class="num"><b data-count="2">0</b><span class="mono">курса позади</span></div>
+        <div class="num"><b data-count="100">0</b><span class="mono">% отдачи каждому проекту</span></div>
+        <div class="num"><b>∞</b><span class="mono">идей в общем блокноте</span></div>
+      </div>
+    </section>
+
+    <div class="mq mq-soft mq-reverse" aria-hidden="true">
+      <div class="mq-track">
+        <div class="mq-in"><span>Figma <em>✦</em> Blender <em>✦</em> HTML/CSS <em>✦</em> JavaScript <em>✦</em> PHP <em>✦</em> Telegram API <em>✦</em> Notion <em>✦</em></span></div>
+        <div class="mq-in"><span>Figma <em>✦</em> Blender <em>✦</em> HTML/CSS <em>✦</em> JavaScript <em>✦</em> PHP <em>✦</em> Telegram API <em>✦</em> Notion <em>✦</em></span></div>
+      </div>
+    </div>
+
+    <!-- вопросы -->
+    <section id="faq" class="faq container">
+      <div class="sec-head">
+        <div>
+          <span class="sec-idx mono" data-scramble>05 / вопросы</span>
+          <h2 class="sec-title lm"><span>Отвечаем честно</span></h2>
+        </div>
+        <p class="sec-note rv">Отзывов у нас пока нет — они появятся здесь после первых заказов. А вот на неудобные вопросы отвечаем уже сейчас.</p>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary><h3>Вы студентки. Это не риск?</h3><span class="q-plus">+</span></summary>
+          <div class="faq-a"><p>Да, мы в начале пути, и скрывать это не будем. Поэтому берём немного проектов, вкладываемся в каждый и всегда на связи. А ещё у нас свежий взгляд без «замыленных» шаблонов — и большая мотивация сделать так, чтобы нас советовали.</p></div>
+        </details>
+        <details>
+          <summary><h3>Сколько стоит лендинг?</h3><span class="q-plus">+</span></summary>
+          <div class="faq-a"><p>От 35 000 ₽ под ключ: структура, дизайн, вёрстка, формы и аналитика. Точную цену назовём после короткого брифа — это бесплатно и ни к чему не обязывает.</p></div>
+        </details>
+        <details>
+          <summary><h3>Что нужно от меня для старта?</h3><span class="q-plus">+</span></summary>
+          <div class="faq-a"><p>Примерно час времени на созвон: расскажем, какие вопросы зададим. Тексты, логотип и фотографии помогут, но их отсутствие не проблема — со всем подскажем.</p></div>
+        </details>
+        <details>
+          <summary><h3>Можете сделать телеграм-бота для приёма заявок?</h3><span class="q-plus">+</span></summary>
+          <div class="faq-a"><p>Да, это зона ответственности Тони. Можем добавить к лендингу или существующему сайту бота, который принимает заявки, отвечает клиентам и складывает всё в базу. Обычно это доп. опция, а не отдельная услуга.</p></div>
+        </details>
+        <details>
+          <summary><h3>А если результат не понравится?</h3><span class="q-plus">+</span></summary>
+          <div class="faq-a"><p>Поэтому мы и работаем этапами: прототип, концепция, макет. Вы видите и одобряете каждый шаг, а две итерации правок всегда включены в цену.</p></div>
+        </details>
+      </div>
+    </section>
+
+    <!-- контакты -->
+    <section id="contact" class="contact">
+      <div class="container contact-grid">
+        <div class="contact-left">
+          <span class="sec-idx mono" data-scramble>06 / контакт</span>
+          <h2 class="sec-title lm"><span>Расскажите о задаче</span></h2>
+          <p class="rv">Мы живём во Владивостоке: отвечаем в будни после учёбы и в выходные. Бриф готовить не нужно — зададим вопросы сами.</p>
+          <p></p>
+          <!-- плашка со всеми каналами связи -->
+          <div class="contact-ways rv" style="--d:.1s">
+            <a class="way" href="https://t.me/tres_studio_bot" target="_blank" rel="noopener">
+              <b>Телеграм-бот</b>
+              <span>@tres_studio_bot · быстрее всего</span>
+            </a>
+            <p></p>
+            <a class="way" href="mailto:hello.tres.studio@gmail.com">
+              <b>Почта</b>
+              <span>hello.tres.studio@gmail.com</span>
+            </a>
+          </div>
+        </div>
+        <!-- форма брифа -->
+        <form id="brief" class="contact-form rv" style="--d:.15s" 
+            action="https://formspree.io/f/mjybpkpn" method="POST" novalidate>
+          <label>Как вас зовут?<input type="text" name="name" required placeholder="Имя"></label>
+
+          <p class="f-lbl mono">Где удобнее общаться?</p>
+          <div class="chips" id="channel">
+            <button type="button" class="chip on" data-ch="telegram">Телеграм</button>
+            <button type="button" class="chip" data-ch="whatsapp">WhatsApp</button>
+            <button type="button" class="chip" data-ch="max">Max</button>
+            <button type="button" class="chip" data-ch="email">Почта</button>
+            <button type="button" class="chip" data-ch="call">Созвон</button>
+          </div>
+
+          <label id="contactLabel">Ваш ник в телеграме<input type="text" name="contact" required placeholder="@username"></label>
+
+          <p class="f-lbl mono">Что нужно сделать?</p>
+          <div class="chips" id="chips">
+            <button type="button" class="chip on">Лендинг под ключ</button>
+            <button type="button" class="chip">Редизайн</button>
+            <button type="button" class="chip">Только макет</button>
+            <button type="button" class="chip">Бот для заявок</button>
+            <button type="button" class="chip">Другое</button>
+          </div>
+          <label>Пара слов о задаче<textarea name="msg" rows="3" placeholder="Например: салон красоты, нужна онлайн-запись…"></textarea></label>
+          <button type="submit" class="btn btn-big">Отправить заявку ↗</button>
+        </form>
+        <div class="form-done" id="formDone">
+          <b>Заявка улетела ✦</b>
+          <p>Ответим в течение дня там, где вам удобнее.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- подвал -->
+  <footer class="foot">
+    <div class="container">
+      <div class="foot-mark" aria-hidden="true">TRES*</div>
+      <div class="foot-rows">
+        <p>© 2026 веб-студия TRES, Приморский край.<br>Сделано нами, конечно же.</p>
+        <nav class="foot-nav mono">
+          <a href="#works">работы</a><a href="#services">услуги</a><a href="#team">команда</a><a href="#contact">контакты</a>
+        </nav>
+        <p class="mono"><a href="https://t.me/tres_studio_bot" target="_blank" rel="noopener">телеграм-бот ↗</a><br><a href="mailto:hello.tres.studio@gmail.com">почта ↗</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="toTop" aria-label="Наверх">↑</button>
+  <script src="js/main.js"></script>
+</body>
+</html>

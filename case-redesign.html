@@ -1,0 +1,104 @@
+<!-- кейс: редизайн пельменной -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Кейс «Редизайн пельменной» — TRES*</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;700;800&family=Golos+Text:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+
+  <div class="noise" aria-hidden="true"></div>
+
+  <!-- шапка -->
+  <header id="hd">
+    <div class="container hd-in">
+      <a class="logo" href="index.html">TRES<span>*</span></a>
+      <div class="hd-right">
+        <a href="index.html#works" class="mono case-back">← все работы</a>
+        <a href="index.html#contact" class="btn">Обсудить проект</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="case-page">
+    <div class="container">
+
+      <span class="sec-idx mono">кейс 02 · концепт</span>
+      <h1 class="case-h">Редизайн: кафе «Пельменная»</h1>
+      <div class="case-tags mono"><span>редизайн</span> <span>figma</span> <span>прототип</span> <span>аудит</span></div>
+
+      <!-- интерактивное до/после прямо в кейсе -->
+      <div class="case-cover case-live">
+        <iframe src="demo-redesign.html" title="Интерактивное до/после"></iframe>
+      </div>
+      <a class="btn" style="margin-top:20px;background:var(--acc);border-color:var(--acc)" href="demo-redesign.html" target="_blank">Открыть в новой вкладке ↗</a>
+
+      <!-- мета-информация о проекте -->
+      <div class="case-meta">
+        <div><span>роль</span><b>аудит и дизайн</b></div>
+        <div><span>инструменты</span><b>Figma · Notion</b></div>
+        <div><span>срок</span><b>2 недели</b></div>
+        <div><span>статус</span><b>интерактив живёт · 2026</b></div>
+      </div>
+
+      <section class="case-block">
+        <h2>Задача</h2>
+        <p>Показать, как устаревший сайт кафе превращается в современный, не теряя характера: посетитель должен сразу понимать, где меню, как заказать и почему это вкусно.</p>
+      </section>
+
+      <section class="case-block">
+        <h2>Что уже сделали</h2>
+        <ol class="case-steps">
+          <li>Собрали интерактивное «до/после» типичного устаревшего сайта кафе — переключатель внутри окна выше.</li>
+          <li>Показали принципы: меню на первом экране, читаемые цены, понятный характер.</li>
+          <li>Дальше в плане: редизайн реального заведения во Владивостоке в Figma — и письмо владельцу.</li>
+        </ol>
+      </section>
+
+      <section class="case-block">
+        <h2>Новое меню — скриншоты из Figma</h2>
+        <div class="case-gallery gal-redesign">
+          <figure class="browser"><img src="img/redesign-menu-desktop.png" alt="Экран меню — десктоп" data-ph="скриншот: меню десктоп"><figcaption class="mono">меню · десктоп</figcaption></figure>
+          <figure class="phone"><img src="img/redesign-menu-mobile.png" alt="Экран меню — мобильный" data-ph="скриншот: меню мобайл"><figcaption class="mono">меню · мобайл</figcaption></figure>
+        </div>
+      </section>
+
+      <section class="case-cta">
+        <h2>Ваш сайт тоже просит обновления?</h2>
+        <a href="index.html#contact" class="btn">Заказать редизайн ↗</a>
+      </section>
+
+      <!-- навигация по кейсам -->
+      <nav class="case-nav">
+        <a href="case-coffee.html">← кофейня у моря</a>
+        <a href="case-booking.html">следующий кейс: онлайн-запись →</a>
+      </nav>
+
+    </div>
+  </main>
+
+  <!-- подвал -->
+  <footer class="foot">
+    <div class="container">
+      <div class="foot-mark" aria-hidden="true">TRES*</div>
+      <div class="foot-rows">
+        <p>© 2026 веб-студия TRES, Приморский край.<br>Сделано нами, конечно же.</p>
+        <nav class="foot-nav mono">
+          <a href="index.html#works">работы</a><a href="index.html#services">услуги</a><a href="index.html#team">команда</a><a href="index.html#contact">контакты</a>
+        </nav>
+        <p class="mono"><a href="https://t.me/tres_studio" target="_blank" rel="noopener">телеграм ↗</a><br><a href="#">бехэнс ↗</a><br><a href="#">вк ↗</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="toTop" aria-label="Наверх">↑</button>
+  <script src="js/case.js"></script>
+</body>
+</html>

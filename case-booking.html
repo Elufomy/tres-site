@@ -1,0 +1,105 @@
+<!-- кейс: онлайн-запись для салона -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <title>Кейс «Онлайн-запись для салона» — TRES*</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;700;800&family=Golos+Text:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+
+  <div class="noise" aria-hidden="true"></div>
+
+  <!-- шапка -->
+  <header id="hd">
+    <div class="container hd-in">
+      <a class="logo" href="index.html">TRES<span>*</span></a>
+      <div class="hd-right">
+        <a href="index.html#works" class="mono case-back">← все работы</a>
+        <a href="index.html#contact" class="btn">Обсудить проект</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="case-page">
+    <div class="container">
+
+      <span class="sec-idx mono">кейс 03 · концепт</span>
+      <h1 class="case-h">Онлайн-запись для салона красоты</h1>
+      <div class="case-tags mono"><span>бэкенд</span> <span>php</span> <span>mysql</span> <span>админка</span></div>
+
+      <!-- рабочее демо прямо в кейсе -->
+      <div class="case-cover case-live">
+        <iframe src="demo-booking.html" title="Рабочая демо-запись"></iframe>
+      </div>
+      <a class="btn" style="margin-top:20px;background:var(--acc);border-color:var(--acc)" href="demo-booking.html" target="_blank">Открыть в новой вкладке ↗</a>
+
+      <!-- мета-информация о проекте -->
+      <div class="case-meta">
+        <div><span>роль</span><b>бэкенд и логика</b></div>
+        <div><span>инструменты</span><b>PHP · MySQL · JS</b></div>
+        <div><span>срок</span><b>вечера после учёбы</b></div>
+        <div><span>статус</span><b>демо работает · 2026</b></div>
+      </div>
+
+      <section class="case-block">
+        <h2>Задача</h2>
+        <p>Сделать собственную систему онлайн-записи — без Tilda и сторонних сервисов. Чтобы клиент не мог записаться в занятый слот, а админ видел все записи в удобном календаре.</p>
+      </section>
+
+      <section class="case-block">
+        <h2>Что уже сделали</h2>
+        <ol class="case-steps">
+          <li>Собрали рабочее демо: форма, проверка занятых слотов, хранение заявок в браузере — можно записаться прямо в окне выше.</li>
+          <li>Сделали мини-админку со списком записей. Попробуйте занять одно время дважды — не получится.</li>
+          <li>Дальше в плане: PHP + MySQL и настоящая серверная админка.</li>
+        </ol>
+      </section>
+
+      <section class="case-block">
+        <h2>Атмосфера проекта</h2>
+        <div class="case-gallery">
+          <figure><img src="img/booking-form.png" alt="Форма записи" data-ph="скриншот: форма записи"><figcaption class="mono">форма записи клиента</figcaption></figure>
+          <figure><img src="img/booking-admin.png" alt="Админка" data-ph="скриншот: календарь в админке"><figcaption class="mono">календарь в админке</figcaption></figure>
+        </div>
+      </section>
+
+      <section class="case-cta">
+        <h2>Нужна запись без звонков для вашего салона?</h2>
+        <a href="index.html#contact" class="btn">Обсудить проект ↗</a>
+      </section>
+
+      <!-- навигация по кейсам -->
+      <nav class="case-nav">
+        <a href="case-redesign.html">← редизайн пельменной</a>
+        <a href="index.html#contact">следующий кейс: ваш проект →</a>
+      </nav>
+
+    </div>
+  </main>
+
+  <!-- подвал -->
+  <footer class="foot">
+    <div class="container">
+      <div class="foot-mark" aria-hidden="true">TRES*</div>
+      <div class="foot-rows">
+        <p>© 2026 веб-студия TRES, Приморский край.<br>Сделано нами, конечно же.</p>
+        <nav class="foot-nav mono">
+          <a href="index.html#works">работы</a><a href="index.html#services">услуги</a><a href="index.html#team">команда</a><a href="index.html#contact">контакты</a>
+        </nav>
+        <p class="mono"><a href="https://t.me/tres_studio" target="_blank" rel="noopener">телеграм ↗</a><br><a href="#">бехэнс ↗</a><br><a href="#">вк ↗</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="toTop" aria-label="Наверх">↑</button>
+  <script src="js/case.js"></script>
+</body>
+</html>

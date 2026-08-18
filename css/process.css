@@ -1,0 +1,17 @@
+/* ═══════════ ПРОЦЕСС — ЛИПКАЯ КОЛОНКА + ШАГИ ═══════════ */
+.process{display:grid;grid-template-columns:1fr 1.25fr;gap:60px;padding:110px 0}
+
+.process-left{position:sticky;top:110px;align-self:start}
+.process-left .sec-note{margin-top:22px}
+
+.step{display:grid;grid-template-columns:64px 1fr;gap:22px;padding:30px 0;border-top:1px dashed var(--line)}
+.step:last-child{border-bottom:1px dashed var(--line)}
+.step-num{font-family:var(--disp);font-weight:800;font-size:26px;color:var(--acc);line-height:1}
+.step h3{font-family:var(--disp);font-weight:500;text-transform:uppercase;font-size:1.1rem;margin-bottom:8px}
+.step p{opacity:.8;font-size:15.5px}
+.dur{display:inline-block;margin-top:12px;font-size:12px;letter-spacing:.08em;color:var(--acc)}
+
+@media(max-width:860px){
+  .process{grid-template-columns:1fr;gap:36px}
+  .process-left{position:static}
+}

@@ -1,0 +1,158 @@
+<!-- демо: онлайн-запись, салон «Пудра» -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<title>Онлайн-запись · салон «Пудра» — демо TRES*</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Golos+Text:wght@400;500;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F5F0EB; --card:#FCFAF7; --ink:#2A211D; --rose:#C08578;
+  --deep:#59433C; --gold:#9C7B4F; --err:#A33B2A; --line:rgba(42,33,29,.16)
+}
+*{box-sizing:border-box;margin:0}
+body{font-family:'Golos Text',sans-serif;background:var(--bg);color:var(--ink)}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(980px,92%);margin:auto}
+h1,h2,.logo{font-family:'Cormorant Garamond',serif;font-weight:600}
+header{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);z-index:10}
+.hd{display:flex;justify-content:space-between;align-items:center;height:70px}
+.logo{font-size:26px;font-style:italic}
+.logo i{font-style:normal;color:var(--rose)}
+.back{font-size:10px;letter-spacing:.28em;text-transform:uppercase;opacity:.7}
+.back:hover{color:var(--rose);opacity:1}
+.tag{display:block;font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--rose);margin:60px 0 12px}
+h1{font-size:clamp(2.2rem,5vw,3.4rem);line-height:1.05}
+h1 em{color:var(--deep)}
+.sub{opacity:.75;max-width:60ch;margin:14px 0 40px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start}
+.box{background:var(--card);border:1px solid var(--line);padding:38px;position:relative}
+.box::before{content:"";position:absolute;inset:8px;border:1px solid var(--line);pointer-events:none}
+.box h2{font-size:1.6rem;margin-bottom:24px}
+.box h2 small{font-family:'Golos Text',sans-serif;font-size:10px;letter-spacing:.26em;
+  text-transform:uppercase;color:var(--gold);margin-right:10px;vertical-align:middle}
+label{display:grid;gap:6px;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--deep);margin-bottom:18px}
+input,select{padding:10px 2px;border:0;border-bottom:1px solid var(--line);border-radius:0;
+  font:15px 'Golos Text',sans-serif;background:transparent;color:var(--ink)}
+input:focus,select:focus{outline:none;border-bottom-color:var(--rose)}
+.btn{background:var(--ink);color:var(--bg);border:0;border-radius:0;padding:14px 26px;
+  font:600 11px 'Golos Text',sans-serif;text-transform:uppercase;letter-spacing:.24em;cursor:pointer;transition:.3s}
+.btn:hover{background:var(--rose)}
+.btn-s{padding:9px 16px}
+.btn-danger{background:transparent;color:var(--err);border:1px solid var(--err)}
+.btn-danger:hover{background:var(--err);color:var(--bg)}
+.msg{margin-top:16px;font-size:14px}
+.msg.err{color:var(--err)}
+.msg.ok{color:var(--deep);font-style:italic;font-family:'Cormorant Garamond',serif;font-size:17px}
+.adm-bar{display:flex;gap:10px;margin-bottom:20px;flex-wrap:wrap}
+table{width:100%;border-collapse:collapse}
+th{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--gold);text-align:left;padding:8px 6px;border-bottom:1px solid var(--ink)}
+td{padding:11px 6px;border-bottom:1px solid var(--line);font-size:14px}
+footer{border-top:1px solid var(--line);margin-top:76px;padding:24px 0;font-size:13px}
+footer a{color:var(--rose)}
+@media(max-width:860px){.grid{grid-template-columns:1fr}.box{padding:30px 22px}}
+</style>
+</head>
+<body>
+
+<!-- шапка демо -->
+<header><div class="wrap hd">
+  <span class="logo">Пудра <i>·</i> салон</span>
+  <a class="back" href="index.html">демо студии TRES*</a>
+</div></header>
+
+<!-- форма записи и админка -->
+<div class="wrap">
+  <span class="tag">владивосток · светланская, 41</span>
+  <h1>Запись онлайн — <em>без звонков</em> и ожидания</h1>
+  <p class="sub">Выберите мастера и время — мы подтвердим запись в течение часа. Демо: заявки хранятся в вашем браузере, занятые слоты блокируются автоматически.</p>
+
+  <div class="grid">
+    <!-- форма клиента -->
+    <div class="box">
+      <h2><small>I</small>Запись</h2>
+      <form id="f">
+        <label>Мастер<select id="m"><option>Анна</option><option>Мария</option></select></label>
+        <label>Услуга<select id="s"><option>Стрижка</option><option>Маникюр</option><option>Окрашивание</option></select></label>
+        <label>Дата<input type="date" id="d" required></label>
+        <label>Время<select id="t"><option>10:00</option><option>12:00</option><option>14:00</option><option>16:00</option><option>18:00</option></select></label>
+        <label>Имя<input id="n" required placeholder="Как к вам обращаться?"></label>
+        <label>Телефон<input id="p" required placeholder="+7 ___ ___-__-__"></label>
+        <button class="btn" type="submit">Записаться</button>
+        <div id="msg" class="msg"></div>
+      </form>
+    </div>
+
+    <!-- мини-админка -->
+    <div class="box">
+      <h2><small>II</small>Админка</h2>
+      <div class="adm-bar">
+        <button class="btn btn-s" id="toggle">показать</button>
+        <button class="btn btn-s btn-danger" id="clear">очистить</button>
+      </div>
+      <div id="adm" hidden>
+        <table>
+          <thead><tr><th>дата</th><th>время</th><th>мастер</th><th>услуга</th><th>гость</th></tr></thead>
+          <tbody id="rows"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- подвал -->
+<footer><div class="wrap" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px">
+  <span>салон «Пудра» · демо</span>
+  <span>сайт сделан веб-студией <a href="index.html">TRES*</a></span>
+</div></footer>
+
+<script>
+// защита от матрёшки: если демо открыто внутри кейса (в iframe),
+// прячем шапку и заставляем все внешние ссылки открываться поверх
+if (self !== top) {
+  const h = document.querySelector('header');
+  if (h) h.style.display = 'none';
+  document.querySelectorAll('a').forEach(a => {
+    const href = a.getAttribute('href') || '';
+    if (!href.startsWith('#')) a.target = '_top';
+  });
+}
+
+// работа с локальным хранилищем заявок
+const get = () => JSON.parse(localStorage.getItem('bookings') || '[]');
+const set = b => localStorage.setItem('bookings', JSON.stringify(b));
+const msg = document.getElementById('msg');
+document.getElementById('d').min = new Date().toISOString().split('T')[0];
+
+// обработка формы записи
+document.getElementById('f').addEventListener('submit', e => {
+  e.preventDefault();
+  const b = { m: m.value, s: s.value, d: d.value, t: t.value, n: n.value, p: p.value };
+  if (!b.d) { msg.className = 'msg err'; msg.textContent = 'Выберите дату.'; return; }
+  const all = get();
+  if (all.some(x => x.m === b.m && x.d === b.d && x.t === b.t)) {
+    msg.className = 'msg err';
+    msg.textContent = 'Это время уже занято — выберите другое. Защита от двойных записей работает.';
+    return;
+  }
+  all.push(b); set(all);
+  msg.className = 'msg ok';
+  msg.textContent = `✦ Будем рады видеть вас, ${b.n}: ${b.d} в ${b.t}, мастер ${b.m}.`;
+  render();
+});
+
+// отрисовка таблицы заявок
+function render() {
+  rows.innerHTML = get().map(b =>
+    `<tr><td>${b.d}</td><td>${b.t}</td><td>${b.m}</td><td>${b.s}</td><td>${b.n}</td></tr>`).join('')
+    || '<tr><td colspan="5" style="opacity:.55">пока пусто</td></tr>';
+}
+toggle.addEventListener('click', () => { adm.hidden = !adm.hidden; render(); });
+clear.addEventListener('click', () => { localStorage.removeItem('bookings'); render(); });
+render();
+</script>
+</body>
+</html>
